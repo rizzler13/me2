@@ -4,104 +4,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>projects — Chinmayi</title>
-  <meta name="description" content="Projects by Chinmayi — systems, inference, open source.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet">
+  <title>Projects — Chinmayi K R</title>
+  <meta name="description" content="Projects by Chinmayi K R. Software Development Engineer & AI/ML Engineer.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+  <!-- Preload authentic modern grotesk & display fonts -->
+  <link rel="preload" href="/fonts/BT-Grotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Grotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Grotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Glyphius-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <div class="page-inner">
 
-    <header class="site-header">
-      <h1 class="site-title"><a href="/">Chinmayi</a></h1>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="nav-link" href="/">home</a>
-        <a class="nav-link active" href="/projects">projects</a>
-        <a class="nav-link" href="/blogs">blog</a>
-        <a href="https://x.com/realrizzler13" class="nav-link" target="_blank" rel="noopener">X</a>
-        <a href="https://github.com/rizzler13" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/chinmayi-kr" class="nav-link" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
-    </header>
+  <!-- ── 3-Line Menu Trigger Button (Top Right Corner) ─────────── -->
+  <button class="menu-trigger-btn" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+    aria-controls="menuDropdown">
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+  </button>
 
-    <main>
+  <!-- Menu Backdrop Scrim -->
+  <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
 
-      <h2 class="section-heading">projects</h2>
+  <!-- Concealed Menu Dropdown -->
+  <div class="menu-dropdown" id="menuDropdown" role="dialog" aria-modal="true" aria-label="Main navigation menu">
+    <nav class="drawer-nav">
+      <a href="/" class="drawer-nav-item">
+        <span class="drawer-nav-label">Home</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="/projects" class="drawer-nav-item active">
+        <span class="drawer-nav-label">Projects</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="/blogs" class="drawer-nav-item">
+        <span class="drawer-nav-label">Writing</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="/#experience" class="drawer-nav-item">
+        <span class="drawer-nav-label">Experience</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="/#contact" class="drawer-nav-item">
+        <span class="drawer-nav-label">Contact</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </div>
 
-      <div class="project-list">
+  <div class="page-container">
 
-        <article class="project-row">
-          <div class="project-info">
-            <h3 class="project-title"><a href="https://d22a5eltm3ki72.cloudfront.net/" target="_blank"
-                rel="noopener">saraswati</a></h3>
-            <p class="project-desc">real-time AI research radar. aggregates and ranks trending papers across platforms.
-            </p>
-            <p class="project-meta">TypeScript · Go · vLLM · Redis · AWS</p>
-          </div>
-          <div class="project-illustration">
-            <img src="/sarasvg.svg" alt="Saraswati illustration">
-          </div>
-        </article>
+    <div class="hero-section" style="padding-bottom: 32px;">
+      <h1 class="hero-statement" style="font-size: 2.2rem;">
+        Projects
+      </h1>
+      <p class="hero-bio-text">
+        Software systems, local model inference runtimes, and developer tooling.
+      </p>
+    </div>
 
-        <article class="project-row">
-          <div class="project-info">
-            <h3 class="project-title"><a href="https://d30924xgb9fh2u.cloudfront.net/" target="_blank"
-                rel="noopener">waypoint</a></h3>
-            <p class="project-desc">interactive cloud infrastructure learning platform. walk through a live-evolving
-              architectural diagram simulating cloud technologies.</p>
-            <p class="project-meta">Next.js · React Flow · MDX · TailwindCSS</p>
-          </div>
-          <div class="project-illustration">
-            <img src="/cloudsvg.svg" alt="Waypoint illustration">
-          </div>
-        </article>
+    <div class="archive-project-list">
 
-        <article class="project-row">
-          <div class="project-info">
-            <h3 class="project-title"><a href="https://d3bxrzk8mr4zou.cloudfront.net/" target="_blank"
-                rel="noopener">vāk</a></h3>
-            <p class="project-desc">a voice agent that can get you back to line.</p>
-            <p class="project-meta">Python</p>
+      <!-- Saraswati -->
+      <article class="archive-card">
+        <div class="archive-card-details">
+          <h2 class="archive-card-title">
+            <a href="https://d22a5eltm3ki72.cloudfront.net/" target="_blank" rel="noopener">Saraswati ↗</a>
+          </h2>
+          <p class="archive-card-desc">
+            A real-time AI research intelligence radar that tracks, aggregates, and ranks trending machine learning
+            papers across academic platforms. Features an asynchronous Go data ingestion pipeline and vLLM neural
+            summarization.
+          </p>
+          <div class="viewport-stack-pills">
+            <span class="stack-tag-pill">TypeScript</span>
+            <span class="stack-tag-pill">Go</span>
+            <span class="stack-tag-pill">vLLM</span>
+            <span class="stack-tag-pill">Redis</span>
+            <span class="stack-tag-pill">AWS</span>
+            <span class="stack-tag-pill">Docker</span>
           </div>
-          <div class="project-illustration">
-            <img src="/vaksvg.svg" alt="Vāk illustration">
-          </div>
-        </article>
+        </div>
+        <div class="archive-card-preview">
+          <img src="/sarasvg.svg" alt="Saraswati architecture diagram" loading="lazy">
+        </div>
+      </article>
 
-        <article class="project-row">
-          <div class="project-info">
-            <h3 class="project-title"><a href="https://github.com/rizzler13/asl-qc" target="_blank"
-                rel="noopener">aslqc</a></h3>
-            <p class="project-desc">quality control tooling for arterial spin labeling MRI data.</p>
-            <p class="project-meta">Python</p>
+      <!-- Waypoint -->
+      <article class="archive-card">
+        <div class="archive-card-details">
+          <h2 class="archive-card-title">
+            <a href="https://d30924xgb9fh2u.cloudfront.net/" target="_blank" rel="noopener">Waypoint ↗</a>
+          </h2>
+          <p class="archive-card-desc">
+            Interactive cloud infrastructure simulator and learning platform. Walk through a live-evolving architectural
+            diagram simulating distributed topologies, traffic surges, and failover states.
+          </p>
+          <div class="viewport-stack-pills">
+            <span class="stack-tag-pill">Next.js</span>
+            <span class="stack-tag-pill">React Flow</span>
+            <span class="stack-tag-pill">MDX</span>
+            <span class="stack-tag-pill">TailwindCSS</span>
           </div>
-          <div class="project-illustration">
-            <img src="/mrisvg.svg" alt="ASLQC illustration">
-          </div>
-        </article>
+        </div>
+        <div class="archive-card-preview">
+          <img src="/cloudsvg.svg" alt="Waypoint architecture diagram" loading="lazy">
+        </div>
+      </article>
 
-        <article class="project-row">
-          <div class="project-info">
-            <h3 class="project-title"><a href="https://github.com/Chinmayi-KR/diffusion-mlx" target="_blank"
-                rel="noopener">diffusion on mlx</a></h3>
-            <p class="project-desc">LLaDA masked diffusion language model ported to Apple Silicon via MLX.</p>
-            <p class="project-meta">Python · MLX</p>
+      <!-- Vāk -->
+      <article class="archive-card">
+        <div class="archive-card-details">
+          <h2 class="archive-card-title">
+            <a href="https://d3bxrzk8mr4zou.cloudfront.net/" target="_blank" rel="noopener">Vāk ↗</a>
+          </h2>
+          <p class="archive-card-desc">
+            An ultra-low latency real-time voice intelligence agent designed to guide structured discussions and keep
+            dialogue focused, featuring streaming acoustic inference over WebSockets.
+          </p>
+          <div class="viewport-stack-pills">
+            <span class="stack-tag-pill">Python</span>
+            <span class="stack-tag-pill">WebSockets</span>
+            <span class="stack-tag-pill">Streaming Audio</span>
           </div>
-          <div class="project-illustration">
-            <img src="/domsvg.svg" alt="Diffusion on MLX illustration">
-          </div>
-        </article>
+        </div>
+        <div class="archive-card-preview">
+          <img src="/vaksvg.svg" alt="Vāk diagram" loading="lazy">
+        </div>
+      </article>
 
+      <!-- Diffusion on MLX -->
+      <article class="archive-card">
+        <div class="archive-card-details">
+          <h2 class="archive-card-title">
+            <a href="https://github.com/Chinmayi-KR/diffusion-mlx" target="_blank" rel="noopener">Diffusion on MLX ↗</a>
+          </h2>
+          <p class="archive-card-desc">
+            Port of the LLaDA masked diffusion language model to Apple Silicon unified memory architecture via Apple
+            MLX. Achieves hardware-optimized local generation without PyTorch runtime overhead by exploiting native
+            unified memory bandwidth.
+          </p>
+          <div class="viewport-stack-pills">
+            <span class="stack-tag-pill">Python</span>
+            <span class="stack-tag-pill">Apple MLX</span>
+            <span class="stack-tag-pill">Diffusion Transformers</span>
+            <span class="stack-tag-pill">Metal</span>
+          </div>
+        </div>
+        <div class="archive-card-preview">
+          <img src="/domsvg.svg" alt="Diffusion on MLX diagram" loading="lazy">
+        </div>
+      </article>
+
+      <!-- ASL QC -->
+      <article class="archive-card">
+        <div class="archive-card-details">
+          <h2 class="archive-card-title">
+            <a href="https://github.com/rizzler13/asl-qc" target="_blank" rel="noopener">ASL QC ↗</a>
+          </h2>
+          <p class="archive-card-desc">
+            Automated quality control tooling and pipeline analytics for Arterial Spin Labeling (ASL) Magnetic Resonance
+            Imaging data in neurological research.
+          </p>
+          <div class="viewport-stack-pills">
+            <span class="stack-tag-pill">Python</span>
+            <span class="stack-tag-pill">NumPy</span>
+            <span class="stack-tag-pill">Signal Processing</span>
+          </div>
+        </div>
+        <div class="archive-card-preview">
+          <img src="/mrisvg.svg" alt="ASL QC diagram" loading="lazy">
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="footer-shell" role="contentinfo">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <span>© 2026 Chinmayi</span>
+        <span><a href="/">← Return Home</a></span>
       </div>
-
-    </main>
+    </footer>
 
   </div>
+
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    Copied to clipboard
+  </div>
+
+  <script>
+    // ── 3-Line Menu Interaction ─────────────────────────────────────
+    const menuToggle = document.getElementById("menuToggle");
+    const menuDropdown = document.getElementById("menuDropdown");
+    const menuBackdrop = document.getElementById("menuBackdrop");
+
+    function openMenu() {
+      if (!menuToggle || !menuDropdown) return;
+      menuToggle.classList.add("open");
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuDropdown.classList.add("visible");
+      if (menuBackdrop) menuBackdrop.classList.add("visible");
+    }
+
+    function closeMenu() {
+      if (!menuToggle || !menuDropdown) return;
+      menuToggle.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuDropdown.classList.remove("visible");
+      if (menuBackdrop) menuBackdrop.classList.remove("visible");
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.classList.contains("open");
+        if (isOpen) closeMenu();
+        else openMenu();
+      });
+    }
+
+    if (menuBackdrop) {
+      menuBackdrop.addEventListener("click", closeMenu);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    document.querySelectorAll(".drawer-nav-item").forEach(item => {
+      item.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    function copyEmail(text, triggerEl) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById("toastNotice");
+        toast.textContent = `Copied ${text} to clipboard`;
+        toast.classList.add("visible");
+        setTimeout(() => toast.classList.remove("visible"), 2200);
+      }).catch(() => {
+        window.location.href = `mailto:${text}`;
+      });
+    }
+  </script>
 </body>
 
 </html>

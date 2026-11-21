@@ -4,69 +4,501 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chinmayi</title>
-  <meta name="description" content="Chinmayi — systems, inference, open source.">
-  <meta name="author" content="Chinmayi">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Chinmayi K R — SDE & AI/ML Engineer</title>
+  <meta name="description"
+    content="Chinmayi K R. Software Development Engineer & AI/ML Engineer building real-time systems, inference runtimes, and developer tools.">
+  <meta name="author" content="Chinmayi K R">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chinmayi K R — SDE & AI/ML Engineer">
+  <meta property="og:description"
+    content="Software Development Engineer & AI/ML Engineer building real-time systems, inference runtimes, and developer tools.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preload authentic modern grotesk & display fonts -->
+  <link rel="preload" href="/fonts/BT-Grotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Grotesk-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Grotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BT-Glyphius-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <div class="page-home">
 
-    <header class="site-header">
-      <h1 class="site-title"><a href="/">Chinmayi</a></h1>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="nav-link active" href="/">home</a>
-        <a class="nav-link" href="/projects">projects</a>
-        <a class="nav-link" href="/blogs">blog</a>
-        <a href="https://x.com/realrizzler13" class="nav-link" target="_blank" rel="noopener">X</a>
-        <a href="https://github.com/rizzler13" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/chinmayi-kr" class="nav-link" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
-    </header>
+  <!-- ── 3-Line Menu Trigger Button (Top Right Corner) ─────────── -->
+  <button class="menu-trigger-btn" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+    aria-controls="menuDropdown">
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+  </button>
 
-    <main>
-      <div class="hero">
+  <!-- Menu Backdrop Scrim -->
+  <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
 
-        <div class="hero-text">
-          <h2 class="greeting">hi, i'm chinmayi.</h2>
+  <!-- Concealed Menu Dropdown -->
+  <div class="menu-dropdown" id="menuDropdown" role="dialog" aria-modal="true" aria-label="Main navigation menu">
+    <nav class="drawer-nav">
+      <a href="#projects" class="drawer-nav-item">
+        <span class="drawer-nav-label">Projects</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="/blogs" class="drawer-nav-item">
+        <span class="drawer-nav-label">Writing</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="#experience" class="drawer-nav-item">
+        <span class="drawer-nav-label">Experience</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="#contact" class="drawer-nav-item">
+        <span class="drawer-nav-label">Contact</span>
+        <span class="drawer-nav-arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </div>
 
-          <div class="bio">
-            <p>I study Data Science and Applications at
-              IIT Madras. I'm building toward AI/ML
-              infrastructure, LLMOps, and CNCF open-source.</p>
+  <div class="page-container">
 
-            <p>I was a student researcher at <i><a href="https://naxxatra.com" target="_blank" rel="noopener">Naxxatra
-                  Sciences</a></i>,
-              where i designed AI/ML curriculum and built Python exercises for neural network topology from
-              scratch. before that, i was a national finalist at the <i>ISRO Hackathon 2024</i>, building a 3D
-              visualization engine for Chandrayaan-2 lunar surface data.</p>
+    <!-- ── Hero Section (Direct, clean, no jargon) ────────────────── -->
+    <section class="hero-section" aria-label="Introduction">
+      <div class="hero-brand-masthead">
+        <h1 class="hero-brand-title">Chinmayi</h1>
+      </div>
 
-            <p>recently, i've been working on <i><a href="https://d30924xgb9fh2u.cloudfront.net" target="_blank"
-                  rel="noopener">Waypoint</a></i>, an interactive cloud infrastructure simulator, <i><a
-                  href="https://d22a5eltm3ki72.cloudfront.net" target="_blank" rel="noopener">Saraswati</a></i>, a
-              real-time AI paper radar built with Go, Python, vLLM, AWS and
-              Docker, and porting <i><a href="https://github.com/Chinmayi-KR/diffusion-mlx" target="_blank"
-                  rel="noopener">LLaDA to Apple
-                  Silicon</a></i> via MLX.</p>
+      <p class="hero-statement">
+        Building real-time data pipelines, local model inference runtimes, and interactive developer platforms.
+      </p>
 
-            <p>i like understanding systems deeply enough to rebuild them from first principles.</p>
+      <p class="hero-bio-text">
+        I work across software engineering and machine learning, from porting diffusion models to Apple Silicon with
+        MLX, to building high-throughput ingestion pipelines in Go, real-time voice agents over WebSockets, and
+        distributed cloud simulators.
+      </p>
+    </section>
+
+    <!-- ── Projects Showcase (Scroll-Driven Interactive Deck) ──── -->
+    <section id="projects" aria-labelledby="heading-projects">
+      <div class="section-header-row">
+        <h2 class="section-title" id="heading-projects">Projects</h2>
+        <span class="section-aside-link">featured projects</span>
+      </div>
+
+      <div class="systems-deck" id="systemsDeck">
+
+        <!-- Left: Project Selector List (Scroll-Driven Triggers) -->
+        <div class="deck-index-list" role="tablist" aria-label="Project selection">
+
+          <button class="deck-item-btn active" onclick="handleProjectClick(0)" id="proj-tab-0" data-index="0" role="tab"
+            aria-selected="true">
+            <h3 class="deck-item-name">Saraswati</h3>
+            <p class="deck-item-tagline">
+              Real-time AI research intelligence radar aggregating and ranking trending papers across academic
+              platforms.
+            </p>
+          </button>
+
+          <button class="deck-item-btn" onclick="handleProjectClick(1)" id="proj-tab-1" data-index="1" role="tab"
+            aria-selected="false">
+            <h3 class="deck-item-name">Waypoint</h3>
+            <p class="deck-item-tagline">
+              Interactive cloud infrastructure simulator and distributed architecture visualizer.
+            </p>
+          </button>
+
+          <button class="deck-item-btn" onclick="handleProjectClick(2)" id="proj-tab-2" data-index="2" role="tab"
+            aria-selected="false">
+            <h3 class="deck-item-name">Vāk</h3>
+            <p class="deck-item-tagline">
+              Ultra-low latency real-time voice intelligence agent with streaming acoustic inference over WebSockets.
+            </p>
+          </button>
+
+          <button class="deck-item-btn" onclick="handleProjectClick(3)" id="proj-tab-3" data-index="3" role="tab"
+            aria-selected="false">
+            <h3 class="deck-item-name">Diffusion on MLX</h3>
+            <p class="deck-item-tagline">
+              LLaDA masked diffusion language model ported to Apple Silicon unified memory via Apple MLX.
+            </p>
+          </button>
+
+          <button class="deck-item-btn" onclick="handleProjectClick(4)" id="proj-tab-4" data-index="4" role="tab"
+            aria-selected="false">
+            <h3 class="deck-item-name">ASL QC</h3>
+            <p class="deck-item-tagline">
+              Automated quality control tooling and pipeline analytics for ASL Magnetic Resonance Imaging data.
+            </p>
+          </button>
+
+        </div>
+
+        <!-- Right: Viewport Stage -->
+        <div class="deck-viewport-stage" id="viewportCard">
+          <div class="viewport-head">
+            <h3 class="viewport-title" id="viewTitle">Saraswati</h3>
+            <div class="viewport-actions">
+              <a href="https://d22a5eltm3ki72.cloudfront.net/" target="_blank" rel="noopener" class="btn-pill-primary"
+                id="viewLiveBtn">
+                <span>Launch</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/Chinmayi-KR" target="_blank" rel="noopener" class="btn-pill-secondary"
+                id="viewSourceBtn">
+                <span>Source</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="viewport-canvas-frame">
+            <img src="/sarasvg.svg" alt="Project visual" id="viewImage" loading="eager">
+          </div>
+
+          <div class="viewport-footer">
+            <p class="viewport-desc" id="viewDesc">
+              A real-time AI research intelligence radar that tracks, aggregates, and ranks trending computer science
+              papers across academic platforms. Built with an asynchronous Go data ingestion pipeline and vLLM neural
+              summarization.
+            </p>
+            <div class="viewport-stack-pills" id="viewStack">
+              <span class="stack-tag-pill">TypeScript</span>
+              <span class="stack-tag-pill">Go</span>
+              <span class="stack-tag-pill">vLLM</span>
+              <span class="stack-tag-pill">Redis</span>
+              <span class="stack-tag-pill">AWS</span>
+              <span class="stack-tag-pill">Docker</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-illustration">
-          <img src="picsvg.svg" alt="Illustration of Chinmayi" width="476" height="312">
+      </div>
+    </section>
+
+    <!-- ── Writing (100% Authentic — Only Real Blog Post) ──────────── -->
+    <section id="writing" aria-labelledby="heading-writing">
+      <div class="section-header-row">
+        <h2 class="section-title" id="heading-writing">Writing</h2>
+      </div>
+
+      <div class="writing-container">
+        <a href="https://diffusiononmlx.netlify.app/" target="_blank" rel="noopener" class="writing-card">
+          <div class="writing-info">
+            <h3 class="writing-headline">The Diffusion Revolt, LLaDA and Masked Diffusion Language Models</h3>
+            <p class="writing-summary">
+              An exploration of non-autoregressive masked diffusion models for text generation and porting them to Apple
+              Silicon using Apple's MLX framework.
+            </p>
+            <span class="writing-meta-tag">diffusiononmlx.netlify.app · May 2026</span>
+          </div>
+          <span class="writing-arrow-btn">Read Article ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Experience (Verified Milestones, No Jargon) ────────────── -->
+    <section id="experience" aria-labelledby="heading-exp">
+      <div class="section-header-row">
+        <h2 class="section-title" id="heading-exp">Experience &amp; Highlights</h2>
+      </div>
+
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-content">
+            <h3 class="experience-org">ISRO Hackathon</h3>
+            <p class="experience-role">National Finalist (2024)</p>
+            <p class="experience-desc">
+              Engineered a 3D terrain visualization engine and telemetry data processing pipeline for Chandrayaan-2
+              lunar orbiter datasets.
+            </p>
+          </div>
         </div>
 
+        <div class="experience-item">
+          <div class="experience-content">
+            <h3 class="experience-org">Naxxatra Sciences</h3>
+            <p class="experience-role">Student Researcher (2024 – 2025)</p>
+            <p class="experience-desc">
+              Researched neural network topology and built deep learning educational models and Python exercises from
+              first principles.
+            </p>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <!-- ── Minimal Footer / Contact ────────────────────────────────── -->
+    <footer class="footer-shell" id="contact" role="contentinfo">
+      <div class="footer-top">
+        <h2 class="footer-heading">
+          Interested in working together or discussing systems and AI/ML?
+        </h2>
+
+        <div class="footer-contact-actions">
+          <button class="copy-email-card" onclick="copyEmail('chinmayikr5@gmail.com', this)">
+            <span class="copy-email-text">chinmayikr5@gmail.com</span>
+            <span class="copy-email-badge">Copy</span>
+          </button>
+
+          <nav class="footer-socials" aria-label="External profiles">
+            <a href="https://github.com/rizzler13" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://x.com/realrizzler13" target="_blank" rel="noopener">X / Twitter ↗</a>
+            <a href="https://www.linkedin.com/in/chinmayi-kr" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© chinmayi</span>
+      </div>
+    </footer>
 
   </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    Copied to clipboard
+  </div>
+
+  <!-- ── Interactive Client Script ──────────────────────────────── -->
+  <script>
+    const projects = [
+      {
+        title: "Saraswati",
+        desc: "A real-time AI research intelligence radar that tracks, aggregates, and ranks trending computer science papers across academic platforms. Built with an asynchronous Go data ingestion pipeline and vLLM neural summarization.",
+        image: "/sarasvg.svg",
+        stack: ["TypeScript", "Go", "vLLM", "Redis", "AWS", "Docker"],
+        live: "https://d22a5eltm3ki72.cloudfront.net/",
+        source: "https://github.com/Chinmayi-KR"
+      },
+      {
+        title: "Waypoint",
+        desc: "Interactive cloud infrastructure simulator and learning platform. Walk through a live-evolving architectural diagram simulating distributed topologies, traffic surges, and failover states.",
+        image: "/cloudsvg.svg",
+        stack: ["Next.js", "React Flow", "MDX", "TailwindCSS"],
+        live: "https://d30924xgb9fh2u.cloudfront.net/",
+        source: "https://github.com/Chinmayi-KR"
+      },
+      {
+        title: "Vāk",
+        desc: "An ultra-low latency real-time voice intelligence agent designed to guide structured discussions and keep dialogue focused, featuring streaming acoustic inference over WebSockets.",
+        image: "/vaksvg.svg",
+        stack: ["Python", "WebSockets", "Streaming Audio"],
+        live: "https://d3bxrzk8mr4zou.cloudfront.net/",
+        source: "https://github.com/rizzler13"
+      },
+      {
+        title: "Diffusion on MLX",
+        desc: "Port of the LLaDA masked diffusion language model to Apple Silicon unified memory architecture via Apple MLX. Achieves hardware-optimized local generation without PyTorch runtime overhead by exploiting native unified memory bandwidth.",
+        image: "/domsvg.svg",
+        stack: ["Python", "Apple MLX", "Diffusion Transformers", "Metal"],
+        live: "https://github.com/Chinmayi-KR/diffusion-mlx",
+        source: "https://github.com/Chinmayi-KR/diffusion-mlx"
+      },
+      {
+        title: "ASL QC",
+        desc: "Automated quality control tooling and pipeline analytics for Arterial Spin Labeling (ASL) Magnetic Resonance Imaging data in neurological research.",
+        image: "/mrisvg.svg",
+        stack: ["Python", "NumPy", "Signal Processing"],
+        live: "https://github.com/rizzler13/asl-qc",
+        source: "https://github.com/rizzler13/asl-qc"
+      }
+    ];
+
+    let currentProjectIndex = 0;
+    let isManualClick = false;
+    let manualClickTimeout = null;
+    let isTicking = false;
+
+    function selectProject(index, animate = true) {
+      if (index < 0 || index >= projects.length) return;
+      if (index === currentProjectIndex && !animate) return;
+      currentProjectIndex = index;
+      const p = projects[index];
+
+      // Update tabs
+      for (let i = 0; i < projects.length; i++) {
+        const tab = document.getElementById(`proj-tab-${i}`);
+        if (tab) {
+          const isActive = (i === index);
+          tab.classList.toggle("active", isActive);
+          tab.setAttribute("aria-selected", isActive ? "true" : "false");
+        }
+      }
+
+      // Update viewport stage with smooth content crossfade
+      const stage = document.getElementById("viewportCard");
+      if (animate && stage) {
+        stage.classList.add("switching");
+      }
+
+      setTimeout(() => {
+        const elTitle = document.getElementById("viewTitle");
+        const elDesc = document.getElementById("viewDesc");
+        const elImg = document.getElementById("viewImage");
+        const elLive = document.getElementById("viewLiveBtn");
+        const elSource = document.getElementById("viewSourceBtn");
+        const elStack = document.getElementById("viewStack");
+
+        if (elTitle) elTitle.textContent = p.title;
+        if (elDesc) elDesc.textContent = p.desc;
+        if (elImg) {
+          elImg.src = p.image;
+          elImg.alt = `${p.title} visual`;
+        }
+        if (elLive) elLive.href = p.live;
+        if (elSource) elSource.href = p.source;
+        if (elStack) {
+          elStack.innerHTML = p.stack.map(s => `<span class="stack-tag-pill">${s}</span>`).join("");
+        }
+
+        if (animate && stage) {
+          setTimeout(() => {
+            stage.classList.remove("switching");
+          }, 30);
+        }
+      }, animate ? 120 : 0);
+    }
+
+    function handleProjectClick(index) {
+      if (index === currentProjectIndex) return;
+      isManualClick = true;
+      selectProject(index, true);
+
+      const tab = document.getElementById(`proj-tab-${index}`);
+      if (tab) {
+        if (window.innerWidth > 960) {
+          const rect = tab.getBoundingClientRect();
+          const targetScrollY = window.scrollY + rect.top - (window.innerHeight * 0.44 - rect.height / 2);
+          window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
+        } else {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+
+      clearTimeout(manualClickTimeout);
+      manualClickTimeout = setTimeout(() => {
+        isManualClick = false;
+      }, 700);
+    }
+
+    // Cancel manual click lock immediately if the user touches the wheel or screen
+    window.addEventListener("wheel", () => {
+      if (isManualClick) isManualClick = false;
+    }, { passive: true });
+
+    window.addEventListener("touchstart", () => {
+      if (isManualClick) isManualClick = false;
+    }, { passive: true });
+
+    // ── Deterministic, Jitter-Free Scroll-Spy ───────────────────────
+    // Linear progression: tracks project closest to focal line; stops at last project.
+    function evaluateScroll() {
+      if (isManualClick || window.innerWidth <= 960) return;
+
+      const deck = document.getElementById("projects");
+      if (!deck) return;
+      const deckRect = deck.getBoundingClientRect();
+
+      // Only check if project deck is near or within view
+      if (deckRect.bottom < 0 || deckRect.top > window.innerHeight) return;
+
+      const focalY = window.innerHeight * 0.44;
+      const cards = document.querySelectorAll(".deck-item-btn");
+
+      let closestIndex = -1;
+      let minDistance = Infinity;
+
+      cards.forEach((card, idx) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(cardCenter - focalY);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = idx;
+        }
+      });
+
+      if (closestIndex !== -1 && closestIndex !== currentProjectIndex) {
+        selectProject(closestIndex, true);
+      }
+    }
+
+    window.addEventListener("scroll", () => {
+      if (!isTicking) {
+        window.requestAnimationFrame(() => {
+          evaluateScroll();
+          isTicking = false;
+        });
+        isTicking = true;
+      }
+    }, { passive: true });
+
+    // Initial evaluation on load
+    window.addEventListener("DOMContentLoaded", () => {
+      evaluateScroll();
+    });
+
+    // ── 3-Line Menu Interaction ─────────────────────────────────────
+    const menuToggle = document.getElementById("menuToggle");
+    const menuDropdown = document.getElementById("menuDropdown");
+    const menuBackdrop = document.getElementById("menuBackdrop");
+
+    function openMenu() {
+      if (!menuToggle || !menuDropdown) return;
+      menuToggle.classList.add("open");
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuDropdown.classList.add("visible");
+      if (menuBackdrop) menuBackdrop.classList.add("visible");
+    }
+
+    function closeMenu() {
+      if (!menuToggle || !menuDropdown) return;
+      menuToggle.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuDropdown.classList.remove("visible");
+      if (menuBackdrop) menuBackdrop.classList.remove("visible");
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.classList.contains("open");
+        if (isOpen) closeMenu();
+        else openMenu();
+      });
+    }
+
+    if (menuBackdrop) {
+      menuBackdrop.addEventListener("click", closeMenu);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    document.querySelectorAll(".drawer-nav-item").forEach(item => {
+      item.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    // Copy Email Toast
+    function copyEmail(text, triggerEl) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById("toastNotice");
+        toast.textContent = `Copied ${text} to clipboard`;
+        toast.classList.add("visible");
+        setTimeout(() => {
+          toast.classList.remove("visible");
+        }, 2200);
+      }).catch(() => {
+        window.location.href = `mailto:${text}`;
+      });
+    }
+  </script>
 </body>
 
 </html>
